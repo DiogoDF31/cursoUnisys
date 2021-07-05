@@ -1,0 +1,55 @@
+
+
+body{
+    background-image: url(../img/1221.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+td{
+    font-size: 16px;
+    font: bold;
+    font-family: sans-serif;
+}
+
+.nameAl{
+    font-size: 20px;
+    color: Black;
+    font: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 7%;
+}
+
+.nameCr{
+    font-size: 20px;
+    color: Black;
+    font: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 14%;
+}
+
+#cboAluno{
+    width: 200px;
+    height: 35px;
+}
+
+#cboCurso{
+    width: 200px;
+    height: 35px;
+}
+
+input{
+    background: rgb(226, 226, 190);
+    width: 100px;
+    height: 30px;
+}
+
+input:hover{
+    cursor: pointer;
+}
+
+select{
+    background: rgb(255, 255, 255);
+    font-size: 14px;
+}

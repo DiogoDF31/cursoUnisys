@@ -1,0 +1,18 @@
+select idVenda, nomeCliente, nomeVendedor, dataVenda
+from venda 
+    inner join cliente on venda.idCliente = cliente.idCliente
+    inner join vendedor on venda.idVendedor = vendedor.idVendedor
+where nomeCliente like '%Maria%'	
+order by dataVenda desc, nomeCliente asc;
+
+
+http://127.0.0.1:8051/unisys/venda/ajaxListarVenda.php?page=1&rows=10&sidx=dataVenda&sord=desc&txtNomeCliente=&txtNomeVendedor=Adibe
+
+http://127.0.0.1:8051/unisys/venda/ajaxListarVenda.php?page=1&rows=10&sidx=dataVenda&sord=desc&txtNomeCliente=&txtNomeVendedor=
+
+http://127.0.0.1:8051/unisys/venda/vendaAction.php?acao=excluir&idVenda=1
+
+	$page  = $_GET['page']; 
+	$limit = $_GET['rows']; 
+	$sidx  = $_GET['sidx']; 
+	$sord  = $_GET['sord'];

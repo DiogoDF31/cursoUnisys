@@ -1,0 +1,45 @@
+<html>
+
+<head>
+	<title>Unisys :: Produto</title>
+	
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	
+	<script type="text/javascript">
+		function buscaProduto(){
+			$.ajax({type:"POST", 
+			        url:"buscar_produto.php",
+			   dataType:"json",
+                   data:{txtCodBarra:$("#txtCodBarra").val()},
+                success:function(data,textStatus,request){
+				             $("#txtNome").val(data['nome']),
+							 $("#txtPreco").val(data['preco']),
+							 $("#txtEstoque").val(data['estoque'])
+                        }				
+				   });
+		}
+		
+	</script>
+</head>
+
+<body>
+	<form>
+		<table>
+			<tr><td>Código</td>
+			    <td><input type="text" id="txtCodBarra"></td>
+				<td><input type="button" id="btnBuscar" value="Buscar" onclick="buscaProduto();"></td>
+			</tr>
+			<tr><td>Nome do produto</td>
+			    <td><input type="text" id="txtNome"></td>
+			</tr>
+            <tr><td>Preço de Venda</td>
+				<td><input type="text" id="txtPreco"></td>
+			</tr>
+			<tr><td>Unid. em Estoque</td>
+			    <td><input type="text" id="txtEstoque"></td>
+			</tr>	
+		</table>
+	</form>
+</body>
+
+</html>
